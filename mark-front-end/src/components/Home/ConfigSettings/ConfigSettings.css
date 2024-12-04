@@ -1,0 +1,79 @@
+.title {
+  color: white;
+  font-size: 14px;
+}
+
+.parameters {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.custom-button {
+  box-sizing: border-box;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  box-sizing: border-box;
+  width: 100%;
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 10px 0;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+  transition: border 0.3s;
+}
+
+.custom-button:hover {
+  border: 2px solid var(--hover-outline-color);
+  transition: border 0.3s;
+}
+
+.custom-button input[type='radio'] {
+  display: none;
+}
+
+.custom-button.active {
+  color: white;
+  font-weight: 500;
+  border: 2px solid transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.line-break {
+  width: 100%;
+  border: 1px solid var(--faded-color);
+  margin-bottom: 7.5px;
+}
+
+.corpus {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+}
+
+.corpus-options {
+  padding: 0px;
+  border: none;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 35px;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: var(--faded-color);
+  color: var(--text-color);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, border 0.3s;
+}

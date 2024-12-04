@@ -1,0 +1,98 @@
+.userRequest {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.userMessage {
+  display: flex;
+  background-color: var(--faded-color);
+  color: var(--text-color);
+  padding: 0px 20px;
+  border-radius: 10px 0px 10px 10px;
+  margin-top: 5px;
+}
+
+.chatbotMessage {
+  display: flex;
+  background-color: transparent;
+  color: var(--text-color);
+  padding: 0px 20px;
+  border-radius: 0px 10px 10px 10px;
+  margin-top: 5px;
+}
+
+.chatInteraction {
+  margin-top: 20px;
+}
+
+.interactionTime {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--text-color-small);
+}
+
+.chatbotMessageThinking {
+  display: flex;
+  background-color: transparent;
+  padding: 0px 20px;
+  border-radius: 0px 10px 10px 10px;
+  margin-top: 5px;
+}
+
+.showSettingsParagraph {
+  color: var(--faded-color);
+}
+
+.chatbotMessage pre {
+  background: #dd3232;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.chatbotMessage code {
+  padding: 2px 4px;
+  border-radius: 4px;
+  background: #1e1e1e;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0.33;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.thinking {
+  padding-top: 15px;
+  color: var(--text-color);
+  animation: fadeInOut 1s ease-in-out infinite;
+}
+
+.pfpMark {
+  font-family: 'Poppins';
+  font-weight: 500;
+  margin-top: 25px;
+  margin-right: 10px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(95, 60, 255);
+  height: 30px;
+  min-width: 30px;
+  border-radius: 25px;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 2s ease-in-out; /* Fade in over 2 seconds */
+}
+
+.fade-in.visible {
+  opacity: 1;
+}

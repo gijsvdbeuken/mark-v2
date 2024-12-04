@@ -1,0 +1,93 @@
+.settingsArea {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.settingsAreaContainer {
+  padding-top: 50px;
+  height: 100%;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 800px;
+}
+
+.mainInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mainInfoSummary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainInfoAbout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputSection {
+  display: flex;
+  gap: 10px;
+}
+
+.sectionPart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input {
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0px 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+textArea {
+  padding: 5px 10px;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+  border-style: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+textArea:focus {
+  outline: none;
+}
+
+.createCorpusBtn {
+  border: none;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0px 40px;
+  background-color: rgb(95, 60, 255);
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}

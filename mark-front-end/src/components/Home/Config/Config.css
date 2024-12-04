@@ -1,0 +1,16 @@
+.config {
+  padding: 0px 10px;
+  background-color: rgb(47, 47, 47);
+  border-radius: 35px 35px 10px 10px;
+  margin-bottom: 10px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  max-height: 500px;
+}

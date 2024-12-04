@@ -1,0 +1,114 @@
+{
+  "bedrijf": {
+    "algemene_informatie": {
+      "naam": "Geen Gedoe - Media & Marketing",
+      "omschrijving": "Bij Geen Gedoe brengen we structuur aan in jouw marketing. Door een strategische aanpak te hanteren en volgens een duidelijk stappenplan te werken is er altijd duidelijkheid. Alle marketing activiteiten bij één partij, met één duidelijke contactpersoon en een maandelijkse meeting om alles toe te lichten. Dat is hoe wij complexe zaken eenvoudig maken. Bij Geen Gedoe hanteren we een strategische aanpak die we aan de hand van ons zelf ontwikkelde framework opstellen.",
+      "opgericht": "2021",
+      "locatie": {
+        "adres": "Maasheseweg 85E",
+        "stad": "Venray",
+        "postcode": "5804 AB",
+        "land": "Nederland"
+      },
+      "website": "http://www.geen-gedoe.nl"
+    },
+    "producten_diensten": [
+      {
+        "naam": "Website",
+        "omschrijving": "Een professionele website die jouw bedrijf online presenteert en klanten aantrekt."
+      },
+      {
+        "naam": "Branding",
+        "omschrijving": "Het creëren van een sterke merkidentiteit om jouw bedrijf te onderscheiden."
+      },
+      {
+        "naam": "Content",
+        "omschrijving": "Het ontwikkelen van relevante en waardevolle content om jouw doelgroep te informeren en te betrekken."
+      },
+      {
+        "naam": "Google Ads",
+        "omschrijving": "Betaalde advertenties op Google om meer verkeer naar jouw website te genereren."
+      },
+      {
+        "naam": "Design",
+        "omschrijving": "Visueel aantrekkelijke ontwerpen voor jouw merk, waaronder logo's en marketingmateriaal."
+      },
+      {
+        "naam": "Employer branding",
+        "omschrijving": "Het opbouwen van een positieve reputatie als werkgever om talent aan te trekken en te behouden."
+      }
+    ],
+    "arbeidsrelaties": {
+      "werkgevers": {
+        "aantal": "3",
+        "personen": [
+          {
+            "naam": "Rob Derks",
+            "functie": "Eigenaar",
+            "email": "rob@geen-gedoe.nl",
+            "over": "Rob Derks is mede eigenaar van Geen Gedoe. Als jij ooit met ons hebt gespart over strategieën of verschillende Google onderwerpen zul je hem vast al kennen. Rob is een echte strateeg in de marketing. Hij houdt zich vanuit ons kantoor dagelijks bezig met alle activiteiten binnen marketing, Google en het opleiden van stagiaires."
+          },
+          {
+            "naam": "Jessie Kuijpers",
+            "functie": "Eigenaar",
+            "email": "jessie@geen-gedoe.nl",
+            "over": "Jessie Kuijpers is een van de oprichters, en mede eigenaren van Geen Gedoe. Hij houdt zich iedere dag bezig met allerlei verschillende marketingwerkzaamheden. Zo is hij een echte strategische specialist, bouwt hij de vetste websites en is hij een master in het opzetten van social ads campagnes."
+          },
+          {
+            "naam": "Wiljan de Ruijter",
+            "functie": "Eigenaar",
+            "email": "wiljan@geen-gedoe.nl",
+            "over": "Wiljan is oprichter en mede eigenaar van Geen Gedoe. Creatieve ideeën bedenken is voor onze Wiljan niet onbekend. Hij is het creatieve meesterbrein van veel verschillende strategische campagnes binnen Geen Gedoe. Buiten zijn creatieve eigenschap is Wiljan ook een echte sportfanaat. in zijn vrije tijd gaat hij graag een rondje fietsen."
+          }
+        ]
+      },
+      "werknemers": {
+        "aantal": "2",
+        "personen": [
+          {
+            "naam": "Lou Bouten",
+            "functie": "Junior online marketeer",
+            "email": "lou@geen-gedoe.nl",
+            "over": "Lou is ons jongste teamlid. Ondanks dat is hij toch al sinds begin 2023 actief bij Geen Gedoe. Vanuit zijn stage is hij doorgegroeid naar een volwaardig lid van ons team. Dagelijkse houdt hij zich voornamelijk bezig met het schrijven van pakkende teksten, het optimaliseren van Google Ads campagnes en het opzetten van strategische SEO plannen."
+          },
+          {
+            "naam": "Gijs van den Beuken",
+            "functie": "Stagiair toegepaste AI",
+            "email": "gijs@kantoor.geen-gedoe.nl"
+          }
+        ]
+      }
+    },
+    "social_media": {
+      "aantal": "3",
+      "kanalen": [
+        {
+          "platform": "Instagram",
+          "url": "https://www.instagram.com/geengedoemedia/"
+        },
+        {
+          "platform": "LinkedIn",
+          "url": "https://www.linkedin.com/company/geen-gedoe/posts/?feedView=all"
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://www.facebook.com/GeenGedoeMedia"
+        }
+      ]
+    },
+    "samenwerkingen": {
+      "aantal": "3",
+      "partners": [
+        {
+          "naam": "Leadinfo"
+        },
+        {
+          "naam": "MailBlue"
+        },
+        {
+          "naam": "Google Partner"
+        }
+      ]
+    }
+  }
+}

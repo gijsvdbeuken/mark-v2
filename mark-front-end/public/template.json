@@ -1,0 +1,21 @@
+{
+  "bedrijf": {
+    "algemeen": {
+      "naam": "",
+      "adres": "",
+      "website": "",
+      "branche": ""
+    },
+    "inhoudelijk": {
+      "omschrijving": "",
+      "producten_diensten": "",
+      "kernwaarde": "",
+      "doelgroep": "",
+      "bedrijfswaarde": ""
+    },
+    "klantrelatie": {
+      "uitgeleende_werkzaamheden": "",
+      "facturatie": ""
+    }
+  }
+}

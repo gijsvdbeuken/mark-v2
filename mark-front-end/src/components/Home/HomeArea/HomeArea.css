@@ -1,0 +1,22 @@
+.chatArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 800px;
+  min-height: 0;
+}
+
+.chatAreaScroller {
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border-radius: 5px;
+}
+
+.chatAreaScroller::-webkit-scrollbar {
+  display: none;
+}
