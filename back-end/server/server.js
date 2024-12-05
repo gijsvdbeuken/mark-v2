@@ -34,9 +34,9 @@ app.post('/chat', async (req, res) => {
       return text.replace(/{/g, '{{').replace(/}/g, '}}');
     }
 
-    const x = replace_braces(corpus);
+    const corpusContent = replace_braces(corpus);
 
-    const promptTemplate = `You are an AI assistant named Mark, specializing in marketing, working for Geen Gedoe. You will be working with this data. When answering, don't rely on the structure of this data too much, keep the output natural: ` + x + `. History: {history} Human: {input} AI:`;
+    const promptTemplate = `You are an AI assistant named Mark, specializing in marketing, working for Geen Gedoe. You will be working with this data. When answering, don't rely on the structure of this data too much, keep the output natural: ` + corpusContent + `. History: {history} Human: {input} AI:`;
 
     const prompt = ChatPromptTemplate.fromTemplate(promptTemplate);
 

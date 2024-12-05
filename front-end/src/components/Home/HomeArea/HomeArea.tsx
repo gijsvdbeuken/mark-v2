@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import ChatConfiguration from '../Config/Config';
+import Config from '../Config/Config';
 import { Interaction } from '../Interaction/Interaction';
 import './HomeArea.css';
 
@@ -41,7 +41,7 @@ const HomeArea: React.FC<HomeAreaProps> = ({ updateNewRequest, answer, question 
           <Interaction key={index} question={interaction.question} answer={interaction.answer || ''} />
         ))}
       </div>
-      <ChatConfiguration onQuestionSubmit={handleQuestionSubmit} />
+      <Config onQuestionSubmit={handleQuestionSubmit} />
     </div>
   );
 };
