@@ -1,6 +1,6 @@
 import React, { ReactNode, useState } from 'react';
 import ErrContext from '../context/ErrContext';
-import ErrMsg from '../components/Other/ErrMsg/ErrMsg';
+import ErrMsg from '../components/errMsg/ErrMsg';
 
 export const ErrProvider = ({ children }: { children: ReactNode }) => {
   const [error, setError] = useState<string | null>(null);

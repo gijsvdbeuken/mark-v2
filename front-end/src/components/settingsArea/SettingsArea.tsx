@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './SettingsArea.css';
-import '../../../App.css';
-import { useError } from '../../../context/ErrContext';
+import '../../App.css';
+import { useError } from '../../context/ErrContext';
 
 const SettingsArea = () => {
   const { showError } = useError();

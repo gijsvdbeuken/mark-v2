@@ -1,4 +1,7 @@
 .settingsArea {
+  display: flex;
+  min-height: 100vh;
+  background-color: #242424;
   box-sizing: border-box;
   display: flex;
   justify-content: center;

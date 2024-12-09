@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useTemperature } from '../../../utilities/useTemperature';
-import { useCorpus } from '../../../utilities/useCorpus';
+import { useTemperature } from '../../utilities/useTemperature';
+import { useCorpus } from '../../utilities/useCorpus';
 import './ConfigSettings.css';
 
 interface ConfigSettingsInterface {

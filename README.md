@@ -25,7 +25,13 @@ Volg de onderstaande stappen om het project op te zetten:
 2. Klik op de groene knop **"Code"** en kies **"Download ZIP"**.
 3. Zet het ZIP-bestand op je bureaublad of een andere locatie op je computer.
 
-### Stap 2: OpenAI API-account instellen en configureren
+### Stap 2: Het project openen in VSCode (optioneel)
+
+1. Open **Visual Studio Code** (VSCode).
+2. Sleep de gedownloade folder (de ZIP-bestanden uitgepakt) naar VSCode om het project te openen.
+3. VSCode zal nu het project openen en je kunt de volgende stappen uitvoeren.
+
+### Stap 3: OpenAI API-account instellen en configureren
 
 1. **Open een OpenAI-account:**
 
@@ -50,12 +56,6 @@ Volg de onderstaande stappen om het project op te zetten:
      ```env
      OPENAI_API_KEY=je-api-sleutel-hier
      ```
-
-### Stap 3: Het project openen in VSCode (optioneel)
-
-1. Open **Visual Studio Code** (VSCode).
-2. Sleep de gedownloade folder (de ZIP-bestanden uitgepakt) naar VSCode om het project te openen.
-3. VSCode zal nu het project openen en je kunt de volgende stappen uitvoeren.
 
 ### Stap 4: Installeren van de benodigde afhankelijkheden
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Config from '../Config/Config';
-import { Interaction } from '../Interaction/Interaction';
+import Config from '../config/Config';
+import { Interaction } from '../interaction/Interaction';
 import './HomeArea.css';
 
 interface HomeAreaProps {

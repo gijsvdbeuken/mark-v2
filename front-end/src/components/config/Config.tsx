@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Config.css';
-import ConfigSearch from '../ConfigSearch/ConfigSearch';
-import ConfigSettings from '../ConfigSettings/ConfigSettings';
+import ConfigSearch from '../configSearch/ConfigSearch';
+import ConfigSettings from '../configSettings/ConfigSettings';
 
 interface ChatConfigurationProps {
   onQuestionSubmit: (question: string, model: string, originality: number, corpus: string) => void;
