@@ -1,15 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Config from '../config/Config';
+import Config from '../configPanel/ConfigPanel';
 import { Interaction } from '../interaction/Interaction';
 import './HomeArea.css';
 
 interface HomeAreaProps {
   updateNewRequest: (question: string, model: string, originality: number, corpus: string) => void;
   answer: string;
-  question: string;
 }
 
-const HomeArea: React.FC<HomeAreaProps> = ({ updateNewRequest, answer, question }) => {
+const HomeArea: React.FC<HomeAreaProps> = ({ updateNewRequest, answer }) => {
   const [interactions, setInteractions] = useState<{ question: string; answer: string | null; model: string; originality: number; corpus: string }[]>([]);
 
   const handleQuestionSubmit = (question: string, model: string, originality: number, corpus: string) => {

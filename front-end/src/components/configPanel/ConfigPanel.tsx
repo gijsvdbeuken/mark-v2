@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Config.css';
+import './ConfigPanel.css';
 import ConfigSearch from '../configSearch/ConfigSearch';
 import ConfigSettings from '../configSettings/ConfigSettings';
 
@@ -33,9 +33,9 @@ const ChatConfiguration: React.FC<ChatConfigurationProps> = ({ onQuestionSubmit 
   }, [question]);
 
   return (
-    <div className="config">
-      <ConfigSearch sendQuestion={receiveQuestion} toggleSettingsHere={toggleSettings} />
-      <div className="options">{showSettings ? <ConfigSettings sendSettings={receiveSettings} /> : null}</div>
+    <div className="configPanel">
+      <ConfigSearch sendQuestion={receiveQuestion} toggleSettings={toggleSettings} />
+      {showSettings ? <ConfigSettings sendSettings={receiveSettings} /> : null}
     </div>
   );
 };

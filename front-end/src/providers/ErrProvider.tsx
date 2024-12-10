@@ -1,6 +1,6 @@
 import React, { ReactNode, useState } from 'react';
 import ErrContext from '../context/ErrContext';
-import ErrMsg from '../components/errMsg/ErrMsg';
+import ErrorMessage from '../components/errorMessage/ErrorMessage';
 
 export const ErrProvider = ({ children }: { children: ReactNode }) => {
   const [error, setError] = useState<string | null>(null);
@@ -22,7 +22,7 @@ export const ErrProvider = ({ children }: { children: ReactNode }) => {
   return (
     <ErrContext.Provider value={{ showError }}>
       {children}
-      {error && <ErrMsg message={error} onClose={handleCloseError} duration={duration} />}
+      {error && <ErrorMessage message={error} onClose={handleCloseError} duration={duration} />}
     </ErrContext.Provider>
   );
 };

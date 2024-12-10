@@ -3,10 +3,10 @@ import './ConfigSearch.css';
 
 interface ConfigSearchInterface {
   sendQuestion: (question: string) => void;
-  toggleSettingsHere: (e: React.MouseEvent) => void;
+  toggleSettings: (e: React.MouseEvent) => void;
 }
 
-const ConfigSearch: React.FC<ConfigSearchInterface> = ({ sendQuestion, toggleSettingsHere }) => {
+const ConfigSearch: React.FC<ConfigSearchInterface> = ({ sendQuestion, toggleSettings }) => {
   const [question, setQuestion] = useState<string>('');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -16,9 +16,9 @@ const ConfigSearch: React.FC<ConfigSearchInterface> = ({ sendQuestion, toggleSet
   };
 
   return (
-    <form onSubmit={handleSubmit} className="question-form">
+    <form onSubmit={handleSubmit} className="form">
       <div className="question-bar">
-        <button className="settings-btn" onClick={toggleSettingsHere}>
+        <button className="settings-btn" onClick={toggleSettings}>
           <i className="fa-solid fa-bars"></i>
         </button>
         <input

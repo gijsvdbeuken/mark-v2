@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import HomeArea from '../../components/homeArea/HomeArea';
-import Sidebar from '../../components/sideBar/Sidebar';
+import Sidebar from '../../components/sidebar/Sidebar';
 import { useAPI } from '../../utilities/useAPI';
 import '../../App.css';
 
@@ -24,7 +24,7 @@ const Home = () => {
       <div className="appContent">
         <Sidebar />
         <div className="chatAreaContainer">
-          <HomeArea updateNewRequest={updateNewRequest} answer={answer} question={question} />
+          <HomeArea updateNewRequest={updateNewRequest} answer={answer} />
         </div>
       </div>
     </div>

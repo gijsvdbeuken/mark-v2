@@ -1,6 +1,6 @@
 import '../../App.css';
 import './Settings.css';
-import Sidebar from '../../components/sideBar/Sidebar';
+import Sidebar from '../../components/sidebar/Sidebar';
 import SettingsArea from '../../components/settingsArea/SettingsArea';
 
 const Settings = () => {
