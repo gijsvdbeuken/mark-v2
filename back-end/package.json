@@ -15,8 +15,10 @@
     "dompurify": "^3.2.2",
     "dotenv": "^16.4.7",
     "express": "^4.21.1",
+    "fs": "^0.0.1-security",
     "jsdom": "^25.0.1",
     "langchain": "^0.3.6",
     "marked": "^15.0.3"
-  }
+  },
+  "proxy": "http://localhost:3001"
 }

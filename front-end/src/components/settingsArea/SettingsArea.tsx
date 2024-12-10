@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './SettingsArea.css';
 import '../../App.css';
-import { useError } from '../../context/ErrContext';
+import saveJsonFile from '../../utilities/saveJsonFile';
 
 const SettingsArea = () => {
-  const { showError } = useError();
-
-  const handleError = () => {
-    showError('This is a sample error message!');
-  };
-
   interface Template {
     bedrijf: {
       algemeen: {
@@ -87,23 +81,10 @@ const SettingsArea = () => {
         },
       };
 
-      await saveDataToFile(updatedTemplate);
+      await saveJsonFile(updatedTemplate);
     } else {
       console.error("Template hasn't loaded yet.");
     }
-  };
-
-  const saveDataToFile = async (data: Template) => {
-    const jsonData = JSON.stringify(data, null, 2);
-    const blob = new Blob([jsonData], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `${data.bedrijf.algemeen.naam || 'data'}.json`;
-    link.click();
-
-    URL.revokeObjectURL(url);
   };
 
   return (
@@ -163,7 +144,6 @@ const SettingsArea = () => {
             </button>
           </div>
         </form>
-        <button onClick={handleError}>Trigger Error</button>
       </div>
     </div>
   );

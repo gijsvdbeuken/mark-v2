@@ -1,0 +1,83 @@
+.tasks-area {
+  display: flex;
+  min-height: 100vh;
+  background-color: #242424;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.tasks-area-container {
+  padding-top: 50px;
+  height: 100%;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 800px;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.create-task-btn {
+  border: none;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0px 40px;
+  background-color: rgb(95, 60, 255);
+}
+
+.open-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.task {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  border: none;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0px 40px;
+  background-color: rgb(95, 60, 255);
+}
+
+.input {
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0px 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  outline: none;
+}

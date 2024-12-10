@@ -1,0 +1,20 @@
+.task {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  border: none;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 14px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0px 40px;
+  background-color: rgb(95, 60, 255);
+}

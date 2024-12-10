@@ -19,6 +19,10 @@ const Sidebar2 = () => {
     navigate('/settings');
   };
 
+  const handleGoToTasks = () => {
+    navigate('/tasks');
+  };
+
   const handleNewChat = () => {
     window.location.reload();
   };
@@ -48,7 +52,13 @@ const Sidebar2 = () => {
                 <div className="optionIcon">
                   <i className="fa-regular fa-file-lines"></i>
                 </div>
-                <div>Corpora beheren</div>
+                <div>Instellingen</div>
+              </button>
+              <button className="optionBtn" onClick={handleGoToTasks}>
+                <div className="optionIcon">
+                  <i className="fa-regular fa-file-lines"></i>
+                </div>
+                <div>Taken</div>
               </button>
               <button onClick={handleClick} className="optionBtn">
                 <div className="optionIcon">
