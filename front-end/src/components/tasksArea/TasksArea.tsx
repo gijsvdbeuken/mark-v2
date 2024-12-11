@@ -96,7 +96,7 @@ const TasksArea = () => {
               Taak aanmaken
             </button>
           </div>
-          <h2>Openstaande taken</h2>
+          <h2>Openstaande taken ({Object.keys(tasks).length})</h2>
           <div className="open-tasks">
             {Object.entries(tasks).map(([taskId, taskData]) => (
               <Task key={taskId} task={taskData.task} corpus={taskData.corpus} deleteTask={() => deleteTask(taskId)} />
