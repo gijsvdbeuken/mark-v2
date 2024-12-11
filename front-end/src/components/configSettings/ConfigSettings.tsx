@@ -10,7 +10,7 @@ interface ConfigSettingsInterface {
 const ConfigSettings: React.FC<ConfigSettingsInterface> = ({ sendSettings }) => {
   const [model, setModel] = useState<string>('gpt-4o-mini');
   const [originality, setOriginality] = useState<string>('genuanceerd');
-  const [corpusTitle, setCorpusTitle] = useState<string>('geen-gedoe.json');
+  const [corpusTitle, setCorpusTitle] = useState<string>('geen-corpus');
   const [corpus, setCorpus] = useState<string>('');
   const [temperature, setTemperature] = useState<number>(0.5);
   const [filenames, setFilenames] = useState<string[]>([]);
@@ -93,6 +93,7 @@ const ConfigSettings: React.FC<ConfigSettingsInterface> = ({ sendSettings }) => 
       <div className="corpus">
         <label>Presets</label>
         <select className="corpus-options" onChange={(e) => setCorpusTitle(e.target.value)}>
+          <option value="geen-corpus">Geen corpus</option>
           {filenames.map((filename, index) => (
             <option key={index} value={filename}>
               {filename}

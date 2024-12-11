@@ -5,6 +5,9 @@ export const useCorpus = (corpusTitle: string) => {
 
   const findCorpusBasedOnTitle = (corpusTitle: string): string => {
     try {
+      if (!corpusTitle.trim() || corpusTitle === 'geen-corpus') {
+        return '';
+      }
       const data = require(`../data/${corpusTitle}`);
       return JSON.stringify(data);
     } catch (error) {

@@ -1,7 +1,20 @@
 {
   "tasks": {
-    "task_1733908046319": "Vandalisme plegen",
-    "task_1733908070377": "Kerstboom stelen",
-    "task_1733908670531": "SEO optimalisatie voor Gramser afronden"
+    "task_1733908046319": {
+      "task": "Vandalisme plegen",
+      "corpus": "geen-gedoe.json"
+    },
+    "task_1733908070377": {
+      "task": "Loo Mare contacteren",
+      "corpus": "geen-gedoe.json"
+    },
+    "task_1733908670531": {
+      "task": "SEO optimalisatie uitvoeren",
+      "corpus": "geen-gedoe.json"
+    },
+    "task_1733926302278": {
+      "task": "asfdsfasdf",
+      "corpus": "geen-gedoe.json"
+    }
   }
 }

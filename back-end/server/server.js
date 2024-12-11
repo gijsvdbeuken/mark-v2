@@ -98,21 +98,22 @@ app.get('/api/files', (req, res) => {
 });
 
 app.post('/api/tasks', (req, res) => {
-  const newTask = req.body.task;
+  const { task, corpus } = req.body; // Get task and corpus from the request body
 
-  if (!newTask) return res.status(400).send('Task is required.');
+  if (!task || !corpus) return res.status(400).send('Task and corpus are required.');
 
   fs.readFile(tasksFilePath, 'utf-8', (err, data) => {
     if (err) return res.status(500).send('Error reading tasks file.');
 
     const tasksData = JSON.parse(data);
-    const taskId = `task_${Date.now()}`;
+    const taskId = `task_${Date.now()}`; // Generate a unique taskId
 
-    tasksData.tasks[taskId] = newTask;
+    // Store the task and corpus under the generated taskId
+    tasksData.tasks[taskId] = { task, corpus };
 
     fs.writeFile(tasksFilePath, JSON.stringify(tasksData, null, 2), (writeErr) => {
       if (writeErr) return res.status(500).send('Error saving task.');
-      res.status(201).json({ taskId, task: newTask });
+      res.status(201).json({ taskId, task, corpus }); // Return taskId, task, and corpus in the response
     });
   });
 });
