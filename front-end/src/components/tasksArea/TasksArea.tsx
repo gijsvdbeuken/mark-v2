@@ -58,7 +58,7 @@ const TasksArea = () => {
           <h1>Taken</h1>
           <h2>Taak aanmaken</h2>
           <label>Waar ga je aan werken?</label>
-          <input className="input" onChange={(e) => setTask(e.target.value)}></input>
+          <input className="input" value={task} onChange={(e) => setTask(e.target.value)}></input>
           <div className="btn-container">
             <button className="create-task-btn" onClick={createTask}>
               Taak aanmaken

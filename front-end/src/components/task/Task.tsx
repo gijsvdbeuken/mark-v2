@@ -10,9 +10,11 @@ const Task: React.FC<TaskProps> = ({ task, deleteTask }) => {
   return (
     <div className="task">
       <h3>{task}</h3>
-      <button className="delete-btn" onClick={deleteTask}>
-        Afronden
-      </button>
+      <div className="buttons">
+        <button className="done-btn" onClick={deleteTask}>
+          Afvinken <i className="fa-solid fa-check"></i>
+        </button>
+      </div>
     </div>
   );
 };
