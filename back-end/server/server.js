@@ -11,8 +11,7 @@ import { ChatOpenAI } from '@langchain/openai';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
-import openTasks from '../../front-end/src/components/tasksArea/tasks.json' assert { type: 'json' };
-const tasks = JSON.stringify(openTasks);
+//import openTasks from '../../front-end/src/components/tasksArea/tasks.json' assert { type: 'json' };
 
 dotenv.config();
 
@@ -28,6 +27,16 @@ app.use(cors());
 
 const memory = new BufferMemory({ returnMessages: true, memoryKey: 'history' });
 
+const getTasks = () => {
+  return new Promise((resolve, reject) => {
+    fs.readFile(tasksFilePath, 'utf-8', (err, data) => {
+      if (err) return reject('Error reading tasks file.');
+      const tasks = JSON.parse(data).tasks;
+      resolve(tasks);
+    });
+  });
+};
+
 app.post('/chat', async (req, res) => {
   try {
     const { message, model, temperature, max_tokens, corpus } = req.body;
@@ -39,12 +48,16 @@ app.post('/chat', async (req, res) => {
       maxTokens: max_tokens,
     });
 
+    // Replace curly braces to avoid template issues
     function replace_braces(text) {
       return text.replace(/{/g, '{{').replace(/}/g, '}}');
     }
 
     const corpusContent = replace_braces(corpus);
-    const tasksFormatted = replace_braces(tasks);
+
+    // Dynamically fetch tasks before each chat request
+    const tasks = await getTasks();
+    const tasksFormatted = replace_braces(JSON.stringify(tasks));
 
     const promptTemplate = `You are an AI assistant named Mark, specializing in marketing, working for Geen Gedoe. You will be working with the following data, if there is any: ` + corpusContent + `. And the human you're talking to is currently working on these tasks, if there are any:` + tasksFormatted + `History: {history} Human: {input} AI:`;
 

@@ -10,7 +10,6 @@ const TasksArea = () => {
 
   const API_URL = 'http://localhost:3001/api/tasks';
 
-  // Fetch tasks from the server
   useEffect(() => {
     fetch(API_URL)
       .then((res) => res.json())
@@ -18,7 +17,6 @@ const TasksArea = () => {
       .catch((err) => console.error('Error fetching tasks:', err));
   }, []);
 
-  // Add a new task
   const createTask = () => {
     if (task.trim()) {
       fetch(API_URL, {
@@ -39,7 +37,6 @@ const TasksArea = () => {
     }
   };
 
-  // Delete a task
   const deleteTask = (taskId: string) => {
     fetch(`${API_URL}/${taskId}`, { method: 'DELETE' })
       .then((res) => {
@@ -59,9 +56,9 @@ const TasksArea = () => {
       <div className="tasks-area-container">
         <div className="task-form">
           <h1>Taken</h1>
-          <h2>Algemeen</h2>
-          <label>Taaknaam</label>
-          <input className="input" onChange={(e) => setTask(e.target.value)} placeholder="Bijv. Kerstballen ophangen"></input>
+          <h2>Taak aanmaken</h2>
+          <label>Waar ga je aan werken?</label>
+          <input className="input" onChange={(e) => setTask(e.target.value)}></input>
           <div className="btn-container">
             <button className="create-task-btn" onClick={createTask}>
               Taak aanmaken

@@ -90,22 +90,22 @@ const SettingsArea = () => {
   return (
     <div className="settingsArea">
       <div className="settingsAreaContainer">
-        <h1>Corpus aanmaken</h1>
+        <h1>Corpora</h1>
         <form onSubmit={handleSubmit} className="mainInfoContainer">
           <div className="mainInfoSummary">
-            <h2>Algemeen</h2>
+            <h2>Corpus aanmaken</h2>
             <div className="inputSection">
               <div className="sectionPart">
                 <label className="label">Naam</label>
-                <input className="input" name="naam" value={formData.naam} onChange={handleChange} placeholder="Bijv. Geen Gedoe" />
+                <input className="input" name="naam" value={formData.naam} onChange={handleChange} />
                 <label className="label">Adres</label>
-                <input className="input" name="adres" value={formData.adres} onChange={handleChange} placeholder="Bijv. Maasheseweg 85e, 5804 AB Venray" />
+                <input className="input" name="adres" value={formData.adres} onChange={handleChange} />
               </div>
               <div className="sectionPart">
                 <label className="label">Website</label>
-                <input className="input" name="website" value={formData.website} onChange={handleChange} placeholder="Bijv. https://www.geen-gedoe.nl" />
+                <input className="input" name="website" value={formData.website} onChange={handleChange} />
                 <label className="label">Branche</label>
-                <input className="input" name="branche" value={formData.branche} onChange={handleChange} placeholder="Bijv. Marketing & communicatie" />
+                <input className="input" name="branche" value={formData.branche} onChange={handleChange} />
               </div>
             </div>
             <h2>Inhoudelijk</h2>

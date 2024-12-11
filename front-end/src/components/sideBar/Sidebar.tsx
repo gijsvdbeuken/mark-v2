@@ -52,11 +52,11 @@ const Sidebar2 = () => {
                 <div className="optionIcon">
                   <i className="fa-regular fa-file-lines"></i>
                 </div>
-                <div>Instellingen</div>
+                <div>Corpora</div>
               </button>
               <button className="optionBtn" onClick={handleGoToTasks}>
                 <div className="optionIcon">
-                  <i className="fa-regular fa-file-lines"></i>
+                  <i className="fa-solid fa-list-check"></i>
                 </div>
                 <div>Taken</div>
               </button>
