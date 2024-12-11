@@ -9,7 +9,10 @@ interface TaskProps {
 const Task: React.FC<TaskProps> = ({ task, deleteTask }) => {
   return (
     <div className="task">
-      <h3>{task}</h3>
+      <div>
+        <h3 className="task-title">{task}</h3>
+        <label>eleven-travel.json</label>
+      </div>
       <div className="buttons">
         <button className="done-btn" onClick={deleteTask}>
           Afvinken <i className="fa-solid fa-check"></i>

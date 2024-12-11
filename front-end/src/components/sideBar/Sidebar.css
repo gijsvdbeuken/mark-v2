@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+.logo {
+  width: 125px;
+  margin-bottom: 15px;
+}
+
 .sidebarArea {
   display: flex;
 }

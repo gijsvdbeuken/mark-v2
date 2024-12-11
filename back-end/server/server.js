@@ -22,6 +22,7 @@ const port = 3001;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const tasksFilePath = path.join(__dirname, '../../front-end/src/components/TasksArea/tasks.json');
+const dataFilesPath = path.join(__dirname, '../../front-end/src/data');
 
 app.use(express.json());
 app.use(cors());
@@ -56,6 +57,8 @@ app.post('/chat', async (req, res) => {
       llm: chatModel,
     });
 
+    console.log('Final Prompt:', promptTemplate.replace('{history}', memory.history).replace('{input}', message));
+
     const response = await chain.call({
       input: message,
     });
@@ -82,6 +85,15 @@ app.get('/api/tasks', (req, res) => {
     if (err) return res.status(500).send('Error reading tasks file.');
     const tasks = JSON.parse(data).tasks;
     res.json(tasks);
+  });
+});
+
+app.get('/api/files', (req, res) => {
+  fs.readdir(dataFilesPath, (err, files) => {
+    if (err) {
+      return res.status(500).json({ error: 'Failed to read files' });
+    }
+    res.json(files);
   });
 });
 

@@ -12,6 +12,10 @@
   align-items: center;
 }
 
+.task-title {
+  margin: 2px 0px;
+}
+
 .done-btn {
   border: none;
   font-family: 'Poppins';

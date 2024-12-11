@@ -10,12 +10,30 @@ interface ConfigSettingsInterface {
 const ConfigSettings: React.FC<ConfigSettingsInterface> = ({ sendSettings }) => {
   const [model, setModel] = useState<string>('gpt-4o-mini');
   const [originality, setOriginality] = useState<string>('genuanceerd');
-  const [corpusTitle, setCorpusTitle] = useState<string>('geen');
+  const [corpusTitle, setCorpusTitle] = useState<string>('geen-gedoe.json');
   const [corpus, setCorpus] = useState<string>('');
   const [temperature, setTemperature] = useState<number>(0.5);
+  const [filenames, setFilenames] = useState<string[]>([]);
 
   const corpusObj = useCorpus(corpusTitle);
   const temperatureObj = useTemperature(originality);
+
+  useEffect(() => {
+    const fetchFiles = async () => {
+      try {
+        const response = await fetch('http://localhost:3001/api/files');
+        if (!response.ok) {
+          throw new Error('Failed to fetch files');
+        }
+        const files = await response.json();
+        setFilenames(files);
+      } catch (error) {
+        console.error('Error fetching files:', error);
+      }
+    };
+
+    fetchFiles();
+  }, []);
 
   useEffect(() => {
     if (corpusObj.corpus !== corpus) {
@@ -75,12 +93,11 @@ const ConfigSettings: React.FC<ConfigSettingsInterface> = ({ sendSettings }) => 
       <div className="corpus">
         <label>Presets</label>
         <select className="corpus-options" onChange={(e) => setCorpusTitle(e.target.value)}>
-          <option value="geen">Geen</option>
-          <option value="geen-gedoe">Geen Gedoe</option>
-          <option value="eleven-travel">Eleven Travel</option>
-          <option value="loo-mare">Loo Mare</option>
-          <option value="jade-styling">Jade Styling</option>
-          <option value="aiki-sports">Aiki Sports</option>
+          {filenames.map((filename, index) => (
+            <option key={index} value={filename}>
+              {filename}
+            </option>
+          ))}
         </select>
       </div>
     </>

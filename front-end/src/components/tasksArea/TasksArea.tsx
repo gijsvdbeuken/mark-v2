@@ -6,6 +6,7 @@ import tasksData from './tasks.json';
 
 const TasksArea = () => {
   const [task, setTask] = useState<string>('');
+  const [corpus, setCorpus] = useState<string>('');
   const [tasks, setTasks] = useState<{ [key: string]: string }>({});
 
   const API_URL = 'http://localhost:3001/api/tasks';
@@ -59,6 +60,8 @@ const TasksArea = () => {
           <h2>Taak aanmaken</h2>
           <label>Waar ga je aan werken?</label>
           <input className="input" value={task} onChange={(e) => setTask(e.target.value)}></input>
+          <label>Welke corpus heb je hiervoor nodig?</label>
+          <input className="input" value={corpus} onChange={(e) => setCorpus(e.target.value)}></input>
           <div className="btn-container">
             <button className="create-task-btn" onClick={createTask}>
               Taak aanmaken

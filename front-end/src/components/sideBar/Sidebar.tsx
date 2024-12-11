@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../App.css';
 import './Sidebar.css';
+import logo from '../../assets/mark-logo.png';
 
 const Sidebar2 = () => {
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ const Sidebar2 = () => {
       {showSidebar ? (
         <div className="sidebar">
           <div className="sidebarContainer">
-            <h2>Mark</h2>
+            <img src={logo} alt="logo" className="logo" />
             <button className="newChatBtn" onClick={handleNewChat}>
               <i className="fa-regular fa-pen-to-square"></i> Nieuwe Chat
             </button>
