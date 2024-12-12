@@ -3,9 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import '../../App.css';
 import './Sidebar.css';
 import logo from '../../assets/mark-logo.png';
+import { useInteractions } from '../../context/InteractionsContext';
 
 const Sidebar2 = () => {
   const navigate = useNavigate();
+  const { clearInteractions } = useInteractions();
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const toggleSidebar = () => {
@@ -25,7 +27,17 @@ const Sidebar2 = () => {
   };
 
   const handleNewChat = () => {
-    window.location.reload();
+    clearInteractions();
+    fetch('http://localhost:3001/reset-chat', { method: 'POST' })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Failed to reset chat on server');
+        }
+        navigate('/');
+      })
+      .catch((error) => {
+        console.error('Error resetting chat:', error);
+      });
   };
 
   const handleClick = () => {

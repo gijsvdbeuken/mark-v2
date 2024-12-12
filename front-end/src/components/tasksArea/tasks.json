@@ -1,15 +1,15 @@
 {
   "tasks": {
-    "task_1733908046319": {
-      "task": "Vandalisme plegen",
+    "task_1733995426747": {
+      "task": "Lou mailen en informeren over zijn ontslag",
       "corpus": "geen-gedoe.json"
     },
-    "task_1733908070377": {
-      "task": "Loo Mare contacteren",
+    "task_1733995443508": {
+      "task": "SEO optimalisatie uitvoeren voor Geen Gedoe",
       "corpus": "geen-gedoe.json"
     },
-    "task_1733908670531": {
-      "task": "SEO optimalisatie uitvoeren",
+    "task_1733995462360": {
+      "task": "Website van Geen Gedoe bijwerken",
       "corpus": "geen-gedoe.json"
     }
   }

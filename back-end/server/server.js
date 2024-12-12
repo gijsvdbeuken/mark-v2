@@ -27,7 +27,24 @@ const dataFilesPath = path.join(__dirname, '../../front-end/src/data');
 app.use(express.json());
 app.use(cors());
 
-const memory = new BufferMemory({ returnMessages: true, memoryKey: 'history' });
+let memory = new BufferMemory({ returnMessages: true, memoryKey: 'history' });
+
+app.post('/reset-chat', (req, res) => {
+  try {
+    memory = new BufferMemory({
+      returnMessages: true,
+      memoryKey: 'history',
+    });
+
+    res.json({ status: 'Chat memory reset successfully' });
+  } catch (error) {
+    console.error('Error resetting chat memory:', error);
+    res.status(500).json({
+      error: 'Failed to reset chat memory',
+      message: error.message,
+    });
+  }
+});
 
 app.post('/chat', async (req, res) => {
   try {
