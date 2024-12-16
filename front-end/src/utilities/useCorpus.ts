@@ -8,7 +8,7 @@ export const useCorpus = (corpusTitle: string) => {
       if (!corpusTitle.trim() || corpusTitle === 'geen-corpus') {
         return '';
       }
-      const data = require(`../data/${corpusTitle}`);
+      const data = require(`../data/corpora/${corpusTitle}`);
       return JSON.stringify(data);
     } catch (error) {
       console.error(`Error loading corpus file: ${corpusTitle}`, error);

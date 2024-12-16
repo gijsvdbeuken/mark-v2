@@ -8,6 +8,7 @@
   max-height: 500px;
   padding: 0px 10px;
   background-color: rgb(47, 47, 47);
-  border-radius: 35px 35px 10px 10px;
+  border-radius: 35px;
   margin-bottom: 10px;
+  padding-bottom: 20px;
 }

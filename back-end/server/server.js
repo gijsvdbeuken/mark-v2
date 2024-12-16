@@ -11,7 +11,7 @@ import { ChatOpenAI } from '@langchain/openai';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
-import openTasks from '../../front-end/src/components/tasksArea/tasks.json' assert { type: 'json' };
+import openTasks from '../../front-end/src/data/tasks/tasks.json' assert { type: 'json' };
 const tasks = JSON.stringify(openTasks);
 
 dotenv.config();
@@ -21,8 +21,8 @@ const port = 3001;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const tasksFilePath = path.join(__dirname, '../../front-end/src/components/TasksArea/tasks.json');
-const dataFilesPath = path.join(__dirname, '../../front-end/src/data');
+const tasksFilePath = path.join(__dirname, '../../front-end/src/data/tasks/tasks.json');
+const corporaFilesPath = path.join(__dirname, '../../front-end/src/data/corpora');
 
 app.use(express.json());
 app.use(cors());
@@ -106,7 +106,8 @@ app.get('/api/tasks', (req, res) => {
 });
 
 app.get('/api/files', (req, res) => {
-  fs.readdir(dataFilesPath, (err, files) => {
+  console.log(tasksFilePath);
+  fs.readdir(corporaFilesPath, (err, files) => {
     if (err) {
       return res.status(500).json({ error: 'Failed to read files' });
     }

@@ -1,0 +1,21 @@
+{
+  "bedrijf": {
+    "algemeen": {
+      "naam": "kjsdnafasf",
+      "adres": "asfda",
+      "website": "asdfsdaf",
+      "branche": "fasadfsdf"
+    },
+    "inhoudelijk": {
+      "omschrijving": "asdfasdf",
+      "producten_diensten": "",
+      "kernwaarde": "",
+      "doelgroep": "",
+      "bedrijfswaarde": ""
+    },
+    "klantrelatie": {
+      "uitgeleende_werkzaamheden": "",
+      "facturatie": ""
+    }
+  }
+}

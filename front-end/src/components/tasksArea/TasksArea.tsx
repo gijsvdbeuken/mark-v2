@@ -2,6 +2,7 @@ import './TasksArea.css';
 import '../../App.css';
 import { useState, useEffect } from 'react';
 import Task from '../task/Task';
+import Dropdown from '../dropdown/Dropdown';
 
 const TasksArea = () => {
   const [task, setTask] = useState<string>('');
@@ -79,7 +80,6 @@ const TasksArea = () => {
         <div className="task-form">
           <h1>Taken</h1>
           <h2>Taak aanmaken</h2>
-
           <label>Werkzaamheden</label>
           <input className="input" value={task} onChange={(e) => setTask(e.target.value)}></input>
           <label>Benodigde corpus</label>
@@ -97,11 +97,24 @@ const TasksArea = () => {
             </button>
           </div>
           <h2>Openstaande taken ({Object.keys(tasks).length})</h2>
-          <div className="open-tasks">
-            {Object.entries(tasks).map(([taskId, taskData]) => (
-              <Task key={taskId} task={taskData.task} corpus={taskData.corpus} deleteTask={() => deleteTask(taskId)} />
-            ))}
-          </div>
+          <Dropdown title="Alle taken">
+            <div className="open-tasks">
+              {Object.entries(tasks).map(([taskId, taskData]) => (
+                <Task key={taskId} task={taskData.task} corpus={taskData.corpus} deleteTask={() => deleteTask(taskId)} />
+              ))}
+            </div>
+          </Dropdown>
+          {filenames.map((filename) => (
+            <Dropdown key={filename} title={filename}>
+              <div className="open-tasks">
+                {Object.entries(tasks)
+                  .filter(([_, taskData]) => taskData.corpus === filename)
+                  .map(([taskId, taskData]) => (
+                    <Task key={taskId} task={taskData.task} corpus={taskData.corpus} deleteTask={() => deleteTask(taskId)} />
+                  ))}
+              </div>
+            </Dropdown>
+          ))}
         </div>
       </div>
     </div>

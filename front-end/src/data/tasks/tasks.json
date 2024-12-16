@@ -1,0 +1,24 @@
+{
+  "tasks": {
+    "task_1733995443508": {
+      "task": "SEO optimalisatie uitvoeren voor Geen Gedoe",
+      "corpus": "geen-gedoe.json"
+    },
+    "task_1733995462360": {
+      "task": "Website van Geen Gedoe bijwerken",
+      "corpus": "geen-gedoe.json"
+    },
+    "task_1734008651354": {
+      "task": "Parkiet uitlaten",
+      "corpus": "geen-gedoe.json"
+    },
+    "task_1734009376384": {
+      "task": "Hond uitlaten",
+      "corpus": "pietje.json"
+    },
+    "task_1734340923312": {
+      "task": "dsaffsdaf",
+      "corpus": "kjsdnafasf.json"
+    }
+  }
+}

@@ -41,7 +41,7 @@ const Sidebar2 = () => {
   };
 
   const handleClick = () => {
-    window.open('https://github.com/gijsvdbeuken/ai-marketing-assistant', '_blank');
+    window.open('https://github.com/gijsvdbeuken/mark-v2', '_blank');
   };
 
   return (
