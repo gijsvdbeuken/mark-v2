@@ -1,0 +1,21 @@
+{
+  "bedrijf": {
+    "algemeen": {
+      "naam": "bbb",
+      "adres": "bbb",
+      "website": "bbb",
+      "branche": "bbb"
+    },
+    "inhoudelijk": {
+      "omschrijving": "bbb",
+      "producten_diensten": "bbb",
+      "kernwaarde": "bbb",
+      "doelgroep": "bbb",
+      "bedrijfswaarde": "bbb"
+    },
+    "klantrelatie": {
+      "uitgeleende_werkzaamheden": "bbb",
+      "facturatie": "bbb"
+    }
+  }
+}

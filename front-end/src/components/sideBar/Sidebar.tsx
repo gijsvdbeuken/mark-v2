@@ -92,7 +92,7 @@ const Sidebar2 = () => {
           </div>
         </div>
       ) : null}
-      <button className="toggleBtn" onClick={toggleSidebar}>
+      <button className={`toggleBtn ${showSidebar ? 'open' : 'closed'}`} onClick={toggleSidebar}>
         <i className="fa-solid fa-bars"></i>
       </button>
     </div>

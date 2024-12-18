@@ -52,7 +52,6 @@ const TasksArea = () => {
             [newTask.taskId]: { task: newTask.task, corpus: newTask.corpus },
           }));
           setTask('');
-          setCorpus('');
         })
         .catch((err) => console.error('Error adding task:', err));
     } else {

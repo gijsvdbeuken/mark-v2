@@ -64,7 +64,13 @@ app.post('/chat', async (req, res) => {
     const corpusContent = replace_braces(corpus);
     const tasksFormatted = replace_braces(tasks);
 
-    const promptTemplate = `You are an AI assistant named Mark, specializing in marketing, working for Geen Gedoe. You will be working with the following data, if there is any: ` + corpusContent + `. And the human you're talking to is currently working on these tasks, if there are any:` + tasksFormatted + `History: {history} Human: {input} AI:`;
+    const promptTemplate =
+      `You are an AI assistant named Mark, specializing in marketing, working for the marketing agency Geen Gedoe. You will be working with the following data, if there is any: ` +
+      corpusContent +
+      `. And the human you're talking to is currently working on these tasks, if there are any:` +
+      tasksFormatted +
+      `. Note that these are internal private tasks binded to the specific human you're talking to, meaning the tasks have no correlation with the actual activities of Geen Gedoe as a whole.` +
+      `History: {history} Human: {input} AI:`;
 
     const prompt = ChatPromptTemplate.fromTemplate(promptTemplate);
 
