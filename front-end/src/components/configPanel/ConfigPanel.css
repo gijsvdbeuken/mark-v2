@@ -12,3 +12,18 @@
   margin-bottom: 10px;
   padding-bottom: 20px;
 }
+
+.configPanelCollapsed {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  max-height: 500px;
+  padding: 0px 10px;
+  background-color: rgb(47, 47, 47);
+  border-radius: 35px;
+  margin-bottom: 10px;
+  padding-bottom: 0px;
+}

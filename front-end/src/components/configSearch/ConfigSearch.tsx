@@ -15,10 +15,15 @@ const ConfigSearch: React.FC<ConfigSearchInterface> = ({ sendQuestion, toggleSet
     setQuestion('');
   };
 
+  const handleSettings = (e: React.MouseEvent) => {
+    e.preventDefault();
+    toggleSettings(e);
+  };
+
   return (
     <form onSubmit={handleSubmit} className="form">
       <div className="question-bar">
-        <button className="settings-btn" onClick={toggleSettings}>
+        <button type="button" className="settings-btn" onClick={handleSettings}>
           <i className="fa-solid fa-bars"></i>
         </button>
         <input

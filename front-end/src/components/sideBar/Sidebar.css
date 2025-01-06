@@ -12,18 +12,18 @@
   top: 0;
   left: 0;
   width: 300px;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   box-sizing: border-box;
   padding: 15px;
   background-color: rgb(47, 47, 47);
   overflow-y: auto;
-  transition: width 0.3s ease; /* Smooth transition for sidebar width */
+  transition: width 0.3s ease; 
 }
 
 .sidebarArea {
   display: flex;
-  margin-left: 300px; /* Prevent content overlap */
-  position: relative; /* Ensures the toggle button is positioned correctly */
+  margin-left: 300px; 
+  position: relative;
 }
 
 .sidebarContainer {
@@ -41,16 +41,16 @@
   height: 50px;
   background-color: transparent;
   cursor: pointer;
-  z-index: 10; /* Ensure the button is always on top */
-  transition: left 0.3s ease, top 0.3s ease; /* Smooth transition when sidebar toggles */
+  z-index: 10;
+  transition: left 0.3s ease, top 0.3s ease; 
 }
 
 .toggleBtn.open {
-  left: 300px; /* When sidebar is open, shift the toggle button slightly out of the sidebar */
+  left: 300px;
 }
 
 .toggleBtn.closed {
-  left: 0px; /* When sidebar is closed, bring the toggle button back in place */
+  left: 0px; 
 }
 
 .newChatBtn {
@@ -156,9 +156,9 @@
 }
 
 .sidebar.closed {
-  width: 80px; /* Shrink sidebar width when collapsed */
+  width: 80px; 
 }
 
 .sidebar.closed .sidebarContainer {
-  align-items: center; /* Center content when sidebar is collapsed */
+  align-items: center; 
 }

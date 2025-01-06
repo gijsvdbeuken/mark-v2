@@ -30,7 +30,6 @@ const HomeArea: React.FC<HomeAreaProps> = ({ updateNewRequest, answer }) => {
     }
   }, [answer]);
 
-  // Scroll to bottom whenever interactions change
   useEffect(() => {
     if (chatAreaScrollerRef.current) {
       chatAreaScrollerRef.current.scrollTop = chatAreaScrollerRef.current.scrollHeight;
