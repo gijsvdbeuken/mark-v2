@@ -83,4 +83,26 @@ Volg de onderstaande stappen om het project op te zetten:
 
 ## Gebruik
 
-// Wordt binnekort toegevoegd...
+De functionaliteit van Mark kan worden onderverdeeld in drie hoofdaspecten:
+
+- Chatten met Mark
+- Corpora aanmaken en toevoegen
+- Taken toevoegen en afvinken
+
+### Chatten met Mark
+
+Bij het opstarten van Mark word je automatisch naar de chatpagina geleid. Hier kun je direct met Mark communiceren, gebaseerd op de parameters die je via het menu onderaan de pagina hebt ingesteld. Je kunt bijvoorbeeld een model selecteren (zoals GPT-4o Turbo of GPT-4o) en de gewenste mate van originaliteit kiezen (voorspelbaar, genuanceerd of creatief). Daarnaast kun je een specifiek corpus selecteren, waardoor Mark toegang krijgt tot de kennis die in dat corpus is opgenomen. Dit maakt Mark geschikt voor context-specifieke gesprekken.
+
+### Corpora aanmaken en toevoegen
+
+Via de zijbalk kun je navigeren naar de corpora-pagina. Hier kun je bedrijfsspecifieke corpora toevoegen, vooral voor kleinere bedrijven die niet expliciet in de kennisbasis van OpenAI-modellen voorkomen. Nadat je de benodigde gegevens hebt ingevoerd, klik je op "corpus aanmaken". Dit genereert een JSON-bestand met alle ingevoerde informatie.
+
+Om dit bestand beschikbaar te maken in de applicatie, navigeer je naar de projectmap en plaats je het JSON-bestand in de map `front-end > src > data > corpora`. Vanaf dat moment is de data toegankelijk voor Mark.
+
+Het is niet verplicht om de corpora-pagina te gebruiken voor het aanmaken van JSON-bestanden. Je kunt ook handmatig een JSON-bestand samenstellen en het op dezelfde locatie plaatsen als hierboven vermeld. Dit is handig als je meer of gedetailleerdere data wilt toevoegen.
+
+### Taken toevoegen en afvinken
+
+De takenpagina, bereikbaar via de zijbalk, stelt je in staat om werkzaamheden toe te voegen en deze te koppelen aan een van de eerder toegevoegde corpora. Zo weet Mark welke specifieke kennis nodig is om je met deze taken te ondersteunen.
+
+Houd er rekening mee dat Mark nieuwe taken alleen kan verwerken nadat de server opnieuw is opgestart. Zonder herstart blijft Mark werken met de taken die actief waren bij de vorige opstart van de server.
