@@ -5,7 +5,7 @@ import './Sidebar.css';
 import logo from '../../assets/mark-logo.png';
 import { useInteractions } from '../../context/InteractionsContext';
 
-const Sidebar2 = () => {
+const Sidebar = () => {
   const navigate = useNavigate();
   const { clearInteractions } = useInteractions();
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
@@ -99,4 +99,4 @@ const Sidebar2 = () => {
   );
 };
 
-export default Sidebar2;
+export default Sidebar;
