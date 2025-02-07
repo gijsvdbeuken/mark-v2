@@ -28,7 +28,7 @@ Volg de onderstaande stappen om het project op te zetten:
 ### Stap 2: Het project openen in VSCode (optioneel)
 
 1. Open **Visual Studio Code** (VSCode).
-2. Sleep de gedownloade folder (de ZIP-bestanden uitgepakt) naar VSCode om het project te openen.
+2. Sleep de gedownloade folder (het ZIP-bestand uitgepakt) naar VSCode om het project te openen.
 3. VSCode zal nu het project openen en je kunt de volgende stappen uitvoeren.
 
 ### Stap 3: OpenAI API-account instellen en configureren
@@ -50,7 +50,7 @@ Volg de onderstaande stappen om het project op te zetten:
 
 4. **.env-bestand aanmaken:**
 
-   - Maak in de root van je project een bestand genaamd `.env`.
+   - Maak in de `back-end` folder van je project een bestand genaamd `.env` aan.
    - Voeg de API-sleutel toe in het bestand in de volgende vorm:
 
      ```env
