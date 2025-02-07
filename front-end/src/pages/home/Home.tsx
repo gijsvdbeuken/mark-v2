@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import HomeArea from '../../components/homeArea/HomeArea';
-import Sidebar from '../../components/sidebar/Sidebar';
+import Sidebar from '../../components/sidebar-new/Sidebar';
 import { useAPI } from '../../utilities/useAPI';
 import '../../App.css';
 
