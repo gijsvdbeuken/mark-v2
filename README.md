@@ -106,3 +106,5 @@ Het is niet verplicht om de corpora-pagina te gebruiken voor het aanmaken van JS
 De takenpagina, bereikbaar via de zijbalk, stelt je in staat om werkzaamheden toe te voegen en deze te koppelen aan een van de eerder toegevoegde corpora. Zo weet Mark welke specifieke kennis nodig is om je met deze taken te ondersteunen.
 
 Houd er rekening mee dat Mark nieuwe taken alleen kan verwerken nadat de server opnieuw is opgestart. Zonder herstart blijft Mark werken met de taken die actief waren bij de vorige opstart van de server.
+
+//
